@@ -13,7 +13,8 @@ import java.util.regex.Matcher;
 
 
 public class Main {
-
+    final static String pattern = "страдание";
+    final static String regex = "^[Сс]трада(.*)";
 
     public static void main(String[] args) throws IOException {
 //        int a = 0;
@@ -30,42 +31,42 @@ public class Main {
 //                for (int i2 = 3; i <= 10; i++) {
 //                    System.out.println(3 * i);
 //
-//    File file = new File("voyna.txt");
-//    Parser parser = new Parser();
-//    ArrayList<String> lines = parser.parse(file);
+
+//        File f1 = new File("C:\\Users\\user\\IdeaProjects\\Framework\\voyna.txt");
+//        String[] words;
+//        String line = "страдание";
+//        FileReader fr = new FileReader(f1);
+//        BufferedReader br = new BufferedReader(fr);
+//        String s;
 //
-//    Pattern pattern = Pattern.compile(regex);
+//        int count = 0;
+//        while ((s = br.readLine()) != null) {
+//            words = s.split(" ");
+//            for (String word : words) {
 //
-//    for (String line:lines) {
-//        if (pattern.matcher(line).find()){
-//            System.out.println(line);
-//        }
 //
-        File f1 = new File("C:\\Users\\user\\IdeaProjects\\Framework\\voyna.txt");
-        String[] words;
-        String line = "страдание";
-        FileReader fr = new FileReader(f1);
-        BufferedReader br = new BufferedReader(fr);
-        String s;
-
-        int count = 0;
-        while ((s = br.readLine()) != null) {
-            words = s.split(" ");
-            for (String word : words) {
-
-
-                Pattern input = Pattern.compile("страда\\D", Pattern.CASE_INSENSITIVE);
-                Matcher mc = input.matcher(word);
-                while (mc.find())
-                    count++;
-                }
-            }
-            if (count != 0) {
-                System.out.println("The word is present" + count + "times in the file");
-            } else {
-                System.out.println("The word is not  present in the file");
-            }
-            fr.close();}}
+//                Pattern input = Pattern.compile("страда\\D", Pattern.CASE_INSENSITIVE);
+//                Matcher mc = input.matcher(word);
+//                while (mc.find())
+//                    count++;
+//                }
+//            }
+//            if (count != 0) {
+//                System.out.println("The word is present" + count + "times in the file");
+//            } else {
+//                System.out.println("The word is not  present in the file");
+//            }
+//            fr.close();}}
 
 
+    File file = new File("voyna.txt");
+    Parser parser = new Parser();
+    ArrayList<String> lines = parser.parse(file);
+
+    Pattern pattern = Pattern.compile(regex);
+
+    for (String line:lines) {
+        if (pattern.matcher(line).find()){
+            System.out.println(line);
+        }}}}
 
