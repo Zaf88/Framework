@@ -50,13 +50,17 @@ public class Main {
                 }
                 fr.close();
             }
-    File file = new File("voyna.txt");
-    Parser parser = new Parser();
-    ArrayList<String> lines = parser.parse(file);
+                File file = new File("voyna.txt");
+                Parser parser = new Parser();
+                ArrayList<String> lines = parser.parse(file);
 
-    Pattern pattern = Pattern.compile(regex);
+                Pattern pattern = Pattern.compile(regex);
 
-    for (String line:lines) {
-        if (pattern.matcher(line).find()) {
-            System.out.println(line);
-        }}}}
+                for (String line : lines) {
+                    if (pattern.matcher(line).find()) {
+                        System.out.println(line);
+                    }
+                }
+            }
+    }
+
