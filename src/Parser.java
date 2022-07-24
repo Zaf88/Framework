@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 
 public class Parser {
@@ -27,4 +28,5 @@ public class Parser {
             words.addAll(Arrays.asList(line.split("[^à-ÿÀ-ß]+")));
         }
         return words;
-    }}
+    }
+}
